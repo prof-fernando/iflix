@@ -1,1 +1,14 @@
-<p>categoria-list works!</p>
+<h1> Lista de categorias</h1>
+
+@if( categorias().length > 0 ){
+   possui dados {{categorias().length}}
+} 
+@else{
+    <h3>
+        Nenhuma categoria encontrada!
+    </h3>
+    <p>
+        cadastre uma clicando aqui!
+    </p>
+
+} 
