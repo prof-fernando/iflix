@@ -1,7 +1,20 @@
 <h1> Lista de categorias</h1>
-
+<a href="/categoria"> Nova Categoria </a>
 @if( categorias().length > 0 ){
-   possui dados {{categorias().length}}
+   
+    <ul>
+        @for( cat of categorias();track cat.idCategoria ){
+            <li>
+                 {{cat.nome}} => {{cat.idCategoria}}  
+                 <a href="/categoria/{{cat.idCategoria}}">
+                    editar
+                 </a>
+
+            </li>
+            
+        }
+    </ul>
+
 } 
 @else{
     <h3>

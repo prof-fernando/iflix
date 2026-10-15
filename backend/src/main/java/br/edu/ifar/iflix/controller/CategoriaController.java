@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(name = "/categoria")
+@RequestMapping( "/categoria")
 public class CategoriaController {
 
     private CategoriaService service;
@@ -16,7 +16,7 @@ public class CategoriaController {
     public CategoriaController( CategoriaService s ) {
         this.service = s;
     }
-
+    @CrossOrigin ("http://localhost:4200")
     @GetMapping
     public List<Categoria> buscarTodos(){
         return this.service.buscarTodos();
