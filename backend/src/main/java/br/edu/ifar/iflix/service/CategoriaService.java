@@ -34,7 +34,7 @@ public class CategoriaService {
     public Categoria buscaPorId(int id){
         return this.repo.findById(id)
         .orElseThrow( () ->  new  ResponseStatusException(
-            HttpStatus.NOT_FOUND, "Categoria não encontrada"
+            HttpStatus.BAD_REQUEST, "Categoria não encontrada"
         ) ) ;
     }
 }
